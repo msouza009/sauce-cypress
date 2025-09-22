@@ -58,7 +58,7 @@ describe('Efetuando Login', () => {
     it.only('Login com senha inválida', () => {
     cy.visit('https://www.saucedemo.com/')
     cy.get('[data-test="username"]').type('user_invalido')
-    cy.get('[data-test="password"]').type('secret_sauce_invalida')
+    cy.get('[data-test="password"]').type('secret_sauce_invalida1')
     cy.get('[data-test="login-button"]').click()
     cy.get('[data-test="error"]').should('contain', 'Epic sadface: Username and password do not match any user in this service')
   })
